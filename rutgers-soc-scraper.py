@@ -38,15 +38,15 @@ def start_check(s, c):
             course = '{}:{}:{}'.format(x['offeringUnitCode'], x['subject'], x['courseNumber'])
             if course in c:
                 c[course]['name'] = x['title']
-                print "{} ({})".format(course, c[course]['name'])
+                print ("{} ({})".format(course, c[course]['name']))
                 for section in x['sections']:
 
                     section_status = 'OPEN' if section['openStatus'] else 'CLOSED'
 
                     if int(section['number']) in c[course]['sections_wanted']:
-                        print "\t{} | {}".format(section['number'], section_status)
+                        print ("\t\t{} | {}".format(section['number'], section_status))
                     elif not c[course]['sections_wanted']:
-                        print "\t{} | {}".format(section['number'], section_status)
+                        print ("\t\t{} | {}".format(section['number'], section_status))
 
     return
 
