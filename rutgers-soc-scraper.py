@@ -1,5 +1,7 @@
 import requests, json
 
+# deprecated...
+
 semester = '92016' # September (Fall) 2016
 campus = 'NB' # New Brunswick
 level = 'U' # Undergraduate
